@@ -1,0 +1,3 @@
+DROP DATABASE IF EXITS techblog_db;
+
+CREATE DATABASE techblog_db;

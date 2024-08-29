@@ -14,6 +14,9 @@ const bcrypt = require("bcrypt");
 // );
 const sequelize = require("./config/connection");
 
+// Requires App-specific Modules
+// const appRoutes = require("./controllers");
+
 // Executes Express Function to Create Application Object (app) using Express Framework
 const app = express();
 // const app = session();
@@ -40,11 +43,15 @@ app.use(express.static(path.join(__dirname, "public")));
 // app.use(session.json());
 // app.use(session.static("public"));
 
+const appRoutes = require("./controllers");
+app.use(appRoutes);
 // app.use(require("./controllers/index.js"));
-const homeRoutes = require("./controllers/index.js");
-const blogRoutes = require("./controllers/index.js");
-app.use("/", homeRoutes);
-app.use("/blog", blogRoutes);
+// const homeRoutes = require("./controllers/index.js");
+// const blogRoutes = require("./controllers/index.js");
+// app.use("/", homeRoutes);
+// app.use("/blog", blogRoutes);
+
+// app.use(appRoutes);
 
 // Route Handlers for App (HTML) Pages and Database (API)
 // WHY DOES API ROUTE HAVE TO BE LISTED FIRST ??? !!!
