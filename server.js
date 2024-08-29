@@ -43,7 +43,7 @@ app.use(express.static(path.join(__dirname, "public")));
 // app.use(session.json());
 // app.use(session.static("public"));
 
-const appRoutes = require("./controllers");
+const appRoutes = require("./controllers/index.js");
 app.use(appRoutes);
 // app.use(require("./controllers/index.js"));
 // const homeRoutes = require("./controllers/index.js");
