@@ -8,7 +8,8 @@ router.get("/blog", function (req, res) {
   // res.sendFile("blog.html", root_dir);
   // res.sendFile("blog.html", { root: root_dir });
   // res.sendFile(__dirname + "/blog.html");
-  res.sendFile("../public/blog.html", { root: __dirname });
+  // res.sendFile("../public/blog.html", { root: __dirname });
+  res.sendFile("./public/blog.html", { root: __dirname });
 });
 
 // router.get("/blog", function (req, res) {

@@ -1,3 +1,5 @@
+// Module 13 - E-Commerce Back-End
+
 const Sequelize = require("sequelize");
 require("dotenv").config();
 
