@@ -1,0 +1,248 @@
+/* GLOBAL Styles */
+
+* {
+  margin:0;
+  padding:0;  
+}
+
+
+/* HEADER */
+
+header {
+  top: 0vh;
+  position: sticky;
+  height: 8vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1vh;
+  text-align: center;
+  color: rgba(0,0,128,1.0);
+  background-color: white;
+}
+
+#headercontent {
+  position: absolute;
+  bottom: 0;
+  left: 35%;
+  /* WAVEY TEXT FOR LATER: https://codepen.io/zachkrall/pen/MWWGMPx */
+  /* CURVED TEXT FOR LATER: https://css-tricks.com/snippets/svg/curved-text-along-path/ */
+}
+
+.logoimg {
+  margin-left: 1vw;
+  /* max-width: 25%;
+  max-height: 25% */
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.moonimg {
+  display: inline;
+  max-width: 45px;
+  max-height: 45px;
+  padding-left: 1vw;
+}
+
+.sunimg {
+  display: none;
+  margin-left: 0vw;
+  max-width: 50px;
+  max-height: 50px;
+  padding-left: 1vw;
+}
+
+
+/* NAV ICON */
+
+.trigger {
+    margin-top: 5vh;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    border: 2px solid rgb(38, 151, 192);
+    border-radius: 15px; /* Menu Icon border corner rounding */
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.bars {
+  width: 40px; /* Menu Icon size */
+  cursor: pointer;
+}
+
+.active {
+  float: right;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  border: 2px solid white;
+  background-color: white;
+  border-radius: 10px; /* Menu Icon border corner rounding */
+}
+
+.bars .line {
+  fill: none;
+  stroke: rgba(0,212,255,1);
+  stroke-width: 4;
+  stroke-linecap: square;
+  transition: stroke-dasharray 400ms,  stroke-dashoffset 400ms;
+}
+
+.bars .line.top {
+  stroke-dasharray: 40 172;
+}
+
+.bars .line.middle {
+  stroke-dasharray: 40 111;
+}
+
+.bars .line.bottom {
+  stroke-dasharray: 40 172;
+}
+
+.bars.active .top {
+  stroke-width: 6;
+  stroke-dashoffset: -132px;
+  stroke: rgba(0,212,255,1);
+}
+
+.bars.active .middle {
+  stroke-width: 6;
+  stroke-dashoffset: -71px;
+  stroke: rgba(0,212,255,1);
+}
+
+.bars.active .bottom {
+  stroke-width: 6;
+  stroke-dashoffset: -132px;
+  stroke: rgba(0,212,255,1);
+}
+
+main {
+  min-height: 100vh;
+  margin-top: 10vh;
+}
+
+
+/* NAV MENU */
+
+.site-nav {
+  overflow: hidden;
+  position: fixed;
+  margin-left: 90vw;
+  text-align: center;
+}
+
+.site-nav #site-links {
+  display: none;
+}
+
+.site-nav a {
+  display: block;
+  text-decoration: none;
+  color: rgb(38, 151, 192);
+}
+
+.site-nav a:hover {
+  content: "";
+  color: rgb(0, 0, 128);
+  text-align: right;
+  border-bottom: 1rem solid rgb(0, 0, 128, 1.0);
+}
+
+
+/* BODY */
+
+body {
+  margin-bottom: 5vh;
+  position: relative;
+  font-family: sans-serif;
+  background-image: url(/assets/images/meandering_stream_v2.0.jpg);  /* iStock */
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-size: auto; */
+  background-size: 100% 100%;
+}
+
+
+/* BUTTONS */
+
+.buttondiv {
+  display: flex;
+  margin-bottom: 10vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  border: 3px solid white; 
+  border-radius: 20px; 
+  min-width: 100px;
+  max-height: 100px;
+  padding: 12px; 
+  background-color: rgb(0, 0, 128, 1.0);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);    
+}
+
+
+/* FOOTER */
+
+footer {
+  position: absolute;
+  margin-bottom: 0vh;
+  padding: 1vh;
+  width: 100%;
+  background-image: linear-gradient(to bottom, rgb(38, 151, 192, 1.0), rgb(38, 151, 192, 0.75), rgb(38, 151, 192, 0.50));
+  color: white;
+  text-align: center;
+  border-top: 0.25vh solid aliceblue;
+}
+
+.copyright {
+  margin: auto;
+  border: 1px solid white;
+  border-radius: 10px;
+  width: 15%;
+  background-color: rgb(0, 0, 128, 0.75);
+}
+
+.footer-attr {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-attr h4 {
+  margin-top: 1vh;
+  margin-left: 1.0vw;
+  margin-right: 1.0vw;
+  font-size: 12px;
+}
+
+.footer-attr p {
+  margin-top: 1vh;
+  /* margin-right: 1vw; */
+  font-size: 12px;
+}
+
+
+/* DARK MODE */
+
+.dark-mode {
+  background-image: linear-gradient(to bottom, rgb(64, 64, 64, 1.0), rgb(64, 64, 64, 0.90), rgb(64, 64, 64, 0.80));
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255); 
+}
+
+.dark-mode a {
+  color: rgb(255, 255, 255);
+}
+
+.dark-mode a:hover {
+  color: rgb(255, 255, 255);
+  border-bottom: 1rem solid rgb(255, 255, 255);
+}

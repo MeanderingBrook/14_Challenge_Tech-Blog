@@ -1,0 +1,73 @@
+/* HEADER */
+
+/* BODY */
+
+main {
+  min-height: 100vh;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+}
+
+
+/* JavaScript-Generated HTML Styles */
+/* CARDS for Individual Blog Posts on Home Page */
+.card {
+  margin: 1vh auto;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+  border-radius: 10px;
+  border-width: 1px;
+  max-width: 800px;
+  padding: 20px 40px;
+  background-color: rgb(255, 255, 255, 0.90);
+  font-size: 18px;
+  color: rgba(0,0,128,1);
+}
+
+.elementDiv {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+#titleDiv {
+  margin-bottom: 4vh;
+  border-bottom: 1px solid rgb(0, 0, 128);
+  padding-bottom: 1.50vh;
+}
+
+/* .titleHeader {
+} */
+
+#contentDiv {
+  margin-bottom: 4.0vh;
+  min-height: 10vh;
+  border-bottom: 1px solid rgb(0, 0, 128,0.25);
+  padding-bottom: 1.50vh;
+}
+
+/* .contentHeader {
+} */
+
+.card h4 {
+  margin-right: 2.0vw;
+}
+
+.card-header::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #e7e9eb;
+}
+
+/* .userHeader {
+} */
+
+
+/* DARK MODE */
+
+.dark-mode {
+  background-image: linear-gradient(to bottom, rgb(64, 64, 64, 1.0), rgb(64, 64, 64, 0.75), rgb(64, 64, 64, 0.50));
+  color: white;
+}
