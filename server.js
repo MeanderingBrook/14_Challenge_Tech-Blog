@@ -8,7 +8,7 @@ const session = require("express-session");
 const exphbs = require("express-handlebars");
 // const connect = require("connect");
 const connect = require("connect-session-sequelize")(session.Store);
-const bcrypt = require("bcrypt");
+// const bcrypt = require("bcrypt");
 // const SequelizeStore = require("connect-session-sequelize")(
 //   connect.session.Store
 // );
