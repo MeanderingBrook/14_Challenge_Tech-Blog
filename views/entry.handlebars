@@ -1,0 +1,27 @@
+{{! Module 14 Challenge: Tech Blog - Edit / Delete Blog Entry }}
+
+<div>
+  <form id="edit-entry-form">
+    <label for="entry-id">Entry ID</label>
+    <input id="entry-id" type="text" name="entry-id" value="{{entry.id}}" />
+
+    <label for="entry-title">Post Title</label>
+    <input
+      id="entry-title"
+      type="text"
+      name="entry-title"
+      value="{{entry.entry_title}}"
+    />
+
+    <label for="entry-text">Post Text</label>
+    <textarea id="entry-text" name="entry-text">{{entry.entry_text}}</textarea>
+
+    {{! <button type="submit">Save Entry</button> }}
+    <button type="submit" id="save-btn">Save Changes</button>
+
+    <button type="button" id="delete-btn">Delete Entry</button>
+  </form>
+</div>
+
+<script src="/js/edit-entry.js"></script>
+{{! WHY NO ./ HERE BUT REQUIRED ON blog.handlebars }}

@@ -1,0 +1,23 @@
+{{! Module 14 Challenge: Tech Blog - Handlebars Wrapper "Page" }}
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Blog</title>
+    {{! <link href="../../public/css/style.css" rel="stylesheet" /> }}
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul class="nav-bar">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog">New Blog Entry</a></li>
+        <li><a href="/signin">Sign In</a></li>
+      </ul>
+    </nav>
+    <div>
+      {{{body}}}
+    </div>
+  </body>
+</html>
