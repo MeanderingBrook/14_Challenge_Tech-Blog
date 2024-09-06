@@ -190,3 +190,20 @@
 // # PG_USER=postgres
 // # PG_PASSWORD=password
 // # PG_DATABASE=employee_db
+
+// server.js
+
+// const pageRoutes = require("./routes/pageRoutes");
+// const apiRoutes = require("./routes/apiRoutes");
+// app.use(require("./controllers/index.js"));
+// const homeRoutes = require("./controllers/index.js");
+// const blogRoutes = require("./controllers/index.js");
+// app.use("/", homeRoutes);
+// app.use("/blog", blogRoutes);
+
+// app.use(appRoutes);
+
+// Route Handlers for App (HTML) Pages and Database (API)
+// WHY DOES API ROUTE HAVE TO BE LISTED FIRST ??? !!!
+// app.use("/api", apiRoutes);
+// app.use("/", pageRoutes);

@@ -1,5 +1,5 @@
 // Initialize Server:
-// Dev Start: npm run devstart
+// Dev Start: npm run dev
 
 // Requires Node Modules
 const path = require("path");
@@ -47,7 +47,6 @@ app.set("view engine", "handlebars");
 
 // Defines Database (JSON) and Static Page Management
 app.use(express.json());
-// app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "/public")));
 
 // app.use(session.json());
@@ -55,20 +54,6 @@ app.use(express.static(path.join(__dirname, "/public")));
 
 // Requires App Routes
 app.use(appRoutes);
-// const pageRoutes = require("./routes/pageRoutes");
-// const apiRoutes = require("./routes/apiRoutes");
-// app.use(require("./controllers/index.js"));
-// const homeRoutes = require("./controllers/index.js");
-// const blogRoutes = require("./controllers/index.js");
-// app.use("/", homeRoutes);
-// app.use("/blog", blogRoutes);
-
-// app.use(appRoutes);
-
-// Route Handlers for App (HTML) Pages and Database (API)
-// WHY DOES API ROUTE HAVE TO BE LISTED FIRST ??? !!!
-// app.use("/api", apiRoutes);
-// app.use("/", pageRoutes);
 
 // Utilizes Sequelize to synchronize Databasee and Initializes Server on Port, PORT
 sequelize.sync({ force: false }).then(() => {
