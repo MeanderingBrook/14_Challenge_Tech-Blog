@@ -1,9 +1,12 @@
+// Requires Node Modules
 const { Model, DataTypes } = require("sequelize");
+
+// Requires App-specific Connection File
 const sequelize = require("../config/connection.js");
 
-class Entry extends Model {}
+class BlogUser extends Model {}
 
-Entry.init(
+BlogUser.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,11 +14,11 @@ Entry.init(
       autoIncrement: true,
       allowNull: false,
     },
-    entry_title: {
+    user_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    entry_text: {
+    user_password: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -25,8 +28,8 @@ Entry.init(
     freezeTableName: true,
     underscored: true,
     timestamps: false,
-    modelName: "entry",
+    modelName: "bloguser",
   }
 );
 
-module.exports = Entry;
+module.exports = BlogUser;

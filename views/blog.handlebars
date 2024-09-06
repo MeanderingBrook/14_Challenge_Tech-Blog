@@ -1,16 +1,23 @@
+{{! Module 14 Challenge: Tech Blog - New Blog Entry }}
+{{! http://localhost:3000/blog }}
+
 <div>
   <h3>
     Enter Your Blog Post
   </h3>
   <form id="new-entry-form">
-    <label for="entry-title">Post Title</label>
-    <input type="text" name="entry-title"/>
+    <div>
+      <label for="entry-title">Post Title</label>
+      <input id="entry-title" type="text" name="entry-title" />
+    </div>
 
-    <label for="entry-text">Post Text</label>
-    <textarea name="entry-text"></textarea>
+    <div>
+      <label for="entry-text">Post Text</label>
+      <textarea id="entry-text" name="entry-text"></textarea>
+    </div>
 
-    <button type="save">Save Entry</button>
+    <button type="submit">Save Entry</button>
   </form>
 </div>
 
-<script src="/assets/js/blog.js"></script>
+<script src="./js/add-entry.js"></script>
